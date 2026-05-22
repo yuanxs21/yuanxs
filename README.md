@@ -2,7 +2,9 @@
 
 Personal academic homepage for **Xiaosong Yuan (苑小松)**, Ph.D. candidate at Jilin University.
 
-Live page: `index.html` (static; open it in any browser, or serve with `python -m http.server`).
+Live page: https://yuanxs21.github.io/yuanxs/
+
+Local preview: open `index.html` in a browser, or run `python -m http.server`.
 
 ## Stack
 
