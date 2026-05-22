@@ -27,7 +27,6 @@
 
   --maxw: 880px;
   --pad: clamp(1.25rem, 3.5vw, 2.5rem);
-  --radius: 10px;
 }
 
 [data-theme="dark"] {
@@ -134,7 +133,7 @@ img { max-width: 100%; display: block; }
 .theme-toggle .icon-moon { display: inline; }
 
 @media (max-width: 640px) {
-  .nav__links a:not(.nav__cta) { display: none; }
+  .nav__links a { display: none; }
 }
 
 /* -------------------------------- layout -------------------------------- */

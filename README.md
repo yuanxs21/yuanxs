@@ -22,7 +22,6 @@ Local preview: open `index.html` in a browser, or run `python -m http.server`.
 │   └── avatar.svg    # SVG monogram
 ├── docs/
 │   └── yuanxs_resume.pdf
-└── slides/           # (legacy)
 ```
 
 ## Design
