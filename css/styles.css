@@ -349,7 +349,7 @@ a:hover { color: var(--link-hover); border-bottom-color: currentColor; }
 .pubs { list-style: none; padding: 0; margin: 0; }
 .pubs li {
   display: grid;
-  grid-template-columns: 78px 1fr;
+  grid-template-columns: 7.5rem 1fr;
   gap: 1.25rem;
   padding: 1rem 0;
   border-top: 1px dashed var(--rule-soft);
@@ -372,7 +372,6 @@ a:hover { color: var(--link-hover); border-bottom-color: currentColor; }
   background: var(--badge-bg);
   color: var(--badge-fg);
   font-weight: 600;
-  text-transform: uppercase;
   white-space: nowrap;
 }
 .venue-badge.highlight {
