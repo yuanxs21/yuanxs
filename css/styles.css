@@ -5,14 +5,14 @@
 ------------------------------------------------------------------ */
 
 :root {
-  --bg:          #fbfaf7;
+  --bg:          #ffffff;
   --bg-elev:    #ffffff;
-  --bg-soft:    #f3f1ec;
+  --bg-soft:    #f8fafc;
   --text:        #1a1d22;
   --text-soft:  #4a525c;
   --text-mute:  #828a94;
-  --rule:        #e6e2d8;
-  --rule-soft:   #efece4;
+  --rule:        #e5e7eb;
+  --rule-soft:   #f1f3f5;
   --accent:      #8c6a3d;        /* muted antique gold */
   --accent-soft: #c9a96a;
   --link:        #1f3a5f;        /* deep ink blue */
