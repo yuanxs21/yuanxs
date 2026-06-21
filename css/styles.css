@@ -19,7 +19,9 @@
   --link-hover:  #0e2238;
   --badge-bg:    #f0ece1;
   --badge-fg:    #6b5430;
-  --pub-highlight-bg: #1f4a7a;
+  --pub-badge-bg: #e8f0fa;
+  --pub-badge-fg: #1e4a8a;
+  --pub-highlight-bg: #2563eb;
   --pub-highlight-fg: #ffffff;
   --shadow:      0 1px 2px rgba(20, 22, 28, .04), 0 8px 24px -16px rgba(20, 22, 28, .08);
 
@@ -46,7 +48,9 @@
   --link-hover:  #d6e6ff;
   --badge-bg:    #20242d;
   --badge-fg:    #d6b87a;
-  --pub-highlight-bg: #4a82c4;
+  --pub-badge-bg: #1a2940;
+  --pub-badge-fg: #93c5fd;
+  --pub-highlight-bg: #3b82f6;
   --pub-highlight-fg: #ffffff;
   --shadow:      0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.6);
 }
@@ -373,8 +377,8 @@ a:hover { color: var(--link-hover); border-bottom-color: currentColor; }
   letter-spacing: .04em;
   padding: .2rem .42rem;
   border-radius: 3px;
-  background: var(--badge-bg);
-  color: var(--badge-fg);
+  background: var(--pub-badge-bg);
+  color: var(--pub-badge-fg);
   font-weight: 600;
   white-space: nowrap;
 }
