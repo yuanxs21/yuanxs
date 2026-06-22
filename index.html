@@ -602,33 +602,40 @@
       });
     });
 
-    // QwenPaw GitHub stars
+    // QwenPaw GitHub stars (fetch once per page visit)
     (function () {
       var el = document.getElementById('qwenpaw-stars');
       if (!el) return;
 
-      function formatStars(count) {
-        if (count >= 1000000) {
-          return (count / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
-        }
-        if (count >= 1000) {
-          return (count / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
-        }
-        return String(count);
+      var CACHE_KEY = 'qwenpaw-stars';
+
+      function formatStars(value) {
+        return String(value).replace(/k$/i, 'K');
       }
 
-      fetch('https://api.github.com/repos/agentscope-ai/QwenPaw', {
-        headers: { Accept: 'application/vnd.github+json' }
-      })
+      function show(value) {
+        el.textContent = formatStars(value);
+      }
+
+      fetch('https://img.shields.io/github/stars/agentscope-ai/QwenPaw.json')
         .then(function (res) {
-          if (!res.ok) throw new Error('GitHub API request failed');
+          if (!res.ok) throw new Error('Star count request failed');
           return res.json();
         })
         .then(function (data) {
-          el.textContent = formatStars(data.stargazers_count);
+          var value = data.message || data.value;
+          if (!value) throw new Error('Missing star count');
+          show(value);
+          try { localStorage.setItem(CACHE_KEY, value); } catch (e) {}
         })
         .catch(function () {
-          el.textContent = '—';
+          try {
+            var cached = localStorage.getItem(CACHE_KEY);
+            if (cached) show(cached);
+            else el.textContent = '—';
+          } catch (e) {
+            el.textContent = '—';
+          }
         });
     })();
   </script>
